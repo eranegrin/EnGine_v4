@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Clean|Win32">
+      <Configuration>Release_Clean</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B6486353-DC99-4D27-9614-6F059FFC6A82}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EnGine_GL4</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Clean|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Clean|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\NVIDIA\PhysX\Include;F:\Projects\EnGine_GL4\Fonts\include;C:\Program Files (x86)\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\NVIDIA\PhysX\Lib\win32;C:\NVIDIA\PhysX\Samples\PxToolkit\lib\win32;C:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\NVIDIA\PhysX\Include;F:\Projects\EnGine_GL4\Fonts\include;C:\Program Files (x86)\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\NVIDIA\PhysX\Lib\win32;C:\NVIDIA\PhysX\Samples\PxToolkit\lib\win32;C:\Program Files (x86)\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Clean|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\NVIDIA\PhysX-3.3.1_PC_SDK_Core\Include;D:\OpenGL\Projects\Cpp\EnGine_GL4\Fonts\include;C:\Program Files\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\NVIDIA\PhysX-3.3.1_PC_SDK_Core\Lib\win32;C:\NVIDIA\PhysX-3.3.1_PC_SDK_Core\Samples\PxToolkit\lib\win32;C:\Program Files\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NVIDIA\PhysX\Include;C:\Program Files\Autodesk\FBX\FBX SDK\2016.1.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;PhysX3CHECKED_x86.lib;PhysX3CommonCHECKED_x86.lib;PhysX3CharacterKinematicCHECKED_x86.lib;PhysX3CookingCHECKED_x86.lib;PhysX3VehicleCHECKED.lib;freetype255ST.lib;FreeImage.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\NVIDIA\PhysX\Lib\win32;F:\Projects\EnGine_GL4\Fonts;F:\Projects\EnGine_GL4\FreeImage\Dist\x32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NVIDIA\PhysX\Include;F:\Projects\EnGine_GL4\Fonts\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;PhysX3CHECKED_x86.lib;PhysX3CommonCHECKED_x86.lib;PhysX3CharacterKinematicCHECKED_x86.lib;PhysX3CookingCHECKED_x86.lib;PhysX3VehicleCHECKED.lib;freetype255ST.lib;FreeImage.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\NVIDIA\PhysX\Lib\win32;F:\Projects\EnGine_GL4\Fonts;F:\Projects\EnGine_GL4\FreeImage\Dist\x32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Clean|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;C_R;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NVIDIA\PhysX-3.3.1_PC_SDK_Core\Include;D:\OpenGL\Projects\Cpp\EnGine_GL4\Fonts\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;PhysX3CHECKED_x86.lib;PhysX3CommonCHECKED_x86.lib;PhysX3CharacterKinematicCHECKED_x86.lib;FreeImage.lib;PhysX3CookingCHECKED_x86.lib;PhysX3VehicleCHECKED.lib;PxToolkit.lib;freetype255ST.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\NVIDIA\PhysX-3.3.1_PC_SDK_Core\Lib\win32;D:\OpenGL\Projects\Cpp\EnGine_GL4\Fonts;D:\OpenGL\Projects\Cpp\EnGine_GL4\FreeImage\Dist\x32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseRenderer.h" />
+    <ClInclude Include="BaseRT.h" />
+    <ClInclude Include="BaseSystem.h" />
+    <ClInclude Include="BasicUI.h" />
+    <ClInclude Include="bitmap.h" />
+    <ClInclude Include="FrameUI.h" />
+    <ClInclude Include="FreeType.h" />
+    <ClInclude Include="GLSLProgram.h" />
+    <ClInclude Include="gl_font.h" />
+    <ClInclude Include="OGL4.h" />
+    <ClInclude Include="RenderManager.h" />
+    <ClInclude Include="RenderTargetInput.h" />
+    <ClInclude Include="ResourceMng.h" />
+    <ClInclude Include="UBOManager.h" />
+    <ClInclude Include="VisAids.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseRenderer.cpp" />
+    <ClCompile Include="BaseRT.cpp" />
+    <ClCompile Include="BaseSystem.cpp" />
+    <ClCompile Include="BasicUI.cpp" />
+    <ClCompile Include="bitmap.cpp" />
+    <ClCompile Include="FrameUI.cpp" />
+    <ClCompile Include="FreeType.cpp" />
+    <ClCompile Include="GLSLProgram.cpp" />
+    <ClCompile Include="gl_font.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OGL4.cpp" />
+    <ClCompile Include="RenderManager.cpp" />
+    <ClCompile Include="RenderTargetInput.cpp" />
+    <ClCompile Include="ResourceMng.cpp" />
+    <ClCompile Include="UBOManager.cpp" />
+    <ClCompile Include="VisAids.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnGBasic\EnGBasic.vcxproj">
+      <Project>{dfafe867-ea7f-4b60-8ef3-ded98ddeeab7}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\EnGDemo\EnGDemo.vcxproj">
+      <Project>{0d88dd46-6a05-46cb-a99b-2fbcbbec6e52}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
